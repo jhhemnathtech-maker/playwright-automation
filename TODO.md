@@ -1,0 +1,3 @@
+- [x] Modify selectDate function to accept a locator parameter for dynamic use with multiple date pickers
+- [x] Add the modified selectDate function to OD.spec.js
+- [x] Call selectDate in the test after Investigatorflow with the dateofloss locator and a sample date
