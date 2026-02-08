@@ -8,6 +8,6 @@ test('has title', async ({ page }) => {
   await loginPage.LoginPagee('8005', 'Royal@1cms');
   await loginPage.ODflow('DV0000006');
   await loginPage.Investigatorflow('DM217006','Royal@1cms','PV00912137','test','9551553255','1200');
-
+  await loginPage.IoAcceptance();
  
 });
