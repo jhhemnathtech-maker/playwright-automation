@@ -17,15 +17,14 @@ class LoginPage {
   async openApplication() {
     await this.page.goto('https://scorecard.superkingsacademy.com:88/home');
     await this.page.waitForTimeout(3000);
-     await page.goto('https://scorecard.superkingsacademy.com:88/home');
-  await page.getByRole('button', { name: 'Login / Sign Up' }).click();
-  await page.getByRole('button', { name: 'Login' }).click();
-  await page.getByRole('textbox', { name: '-digit Mobile Number' }).click();
-  await page.getByRole('textbox', { name: '-digit Mobile Number' }).fill('1234');
-  await page.getByRole('textbox', { name: 'Password' }).click();
-  await page.getByRole('textbox', { name: 'Password' }).fill('56789');
-  await page.getByRole('button', { name: 'Go!' }).click();
-  await page.getByRole('button', { name: 'Signup' }).click();
+  await this.page.getByRole('button', { name: 'Login / Sign Up' }).click();
+  await this.page.getByRole('button', { name: 'Login' }).click();
+  await this.page.getByRole('textbox', { name: '-digit Mobile Number' }).click();
+  await this.page.getByRole('textbox', { name: '-digit Mobile Number' }).fill('1234');
+  await this.page.getByRole('textbox', { name: 'Password' }).click();
+  await this.page.getByRole('textbox', { name: 'Password' }).fill('56789');
+  await this.page.getByRole('button', { name: 'Go!' }).click();
+  await this.page.getByRole('button', { name: 'Signup' }).click();
 
     
   }
