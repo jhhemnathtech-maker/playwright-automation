@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'Node18'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install & Run CSK Tests') {
+            steps {
+                bat 'npm install'
+                bat 'npx playwright install'
+                bat 'npx playwright test tests/login.spec.js'
+            }
+        }
+
+        stage('Archive Report') {
+            steps {
+                archiveArtifacts artifacts: 'playwright-report/**'
+            }
+        }
+    }
+}
